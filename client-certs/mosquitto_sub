@@ -1,0 +1,1 @@
+mosquitto_sub -h a35al9ya6x2of9-ats.iot.us-east-1.amazonaws.com -p 8883 -i fd843b13958712604ffad29467517eba182b27351665d1a08fc2268c6f1e335d -t SistCiberfis/example/topic --cafile AmazonRootCA1.pem --cert fd843b13958712604ffad29467517eba182b27351665d1a08fc2268c6f1e335d-certificate.pem.crt --key fd843b13958712604ffad29467517eba182b27351665d1a08fc2268c6f1e335d-private.pem.key
