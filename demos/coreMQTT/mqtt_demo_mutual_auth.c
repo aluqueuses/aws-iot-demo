@@ -576,11 +576,13 @@ int RunCoreMqttMutualAuthDemo( bool awsIotMqttMode,
                 {
                     xDemoStatus = pdFAIL;
                 }*/
+
+                /* aluque Toggle LEDs to sign that it is ok */
+            	HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
+            	BSP_LED_Toggle(LED_GREEN);
             }
 
-            /* aluque Toggle LEDs to sign that it is ok */
-        	HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
-        	BSP_LED_Toggle(LED_GREEN);
+
 
             /* Leave Connection Idle for some time. */
             LogInfo( ( "Keeping Connection Idle..." ) );
