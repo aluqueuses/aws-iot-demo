@@ -1016,7 +1016,8 @@ static BaseType_t prvMQTTPublishToTopic( MQTTContext_t * pxMQTTContext )
     //sprintf(payLoad,"%d",temp);
 
     /* This demo uses QoS1. */
-    xMQTTPublishInfo.qos = MQTTQoS1;
+    /* aluque Change to Qos0 */
+    xMQTTPublishInfo.qos = MQTTQoS0;
     xMQTTPublishInfo.retain = false;
     xMQTTPublishInfo.pTopicName = mqttexampleTOPIC;
     xMQTTPublishInfo.topicNameLength = ( uint16_t ) strlen( mqttexampleTOPIC );
