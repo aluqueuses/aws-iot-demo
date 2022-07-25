@@ -545,7 +545,8 @@ int RunCoreMqttMutualAuthDemo( bool awsIotMqttMode,
             /* If server rejected the subscription request, attempt to resubscribe to topic.
              * Attempts are made according to the exponential backoff retry strategy
              * implemented in backoff_algorithm. */
-            xDemoStatus = prvMQTTSubscribeWithBackoffRetries( &xMQTTContext );
+            /* aluque Do not subscribe */
+        	//xDemoStatus = prvMQTTSubscribeWithBackoffRetries( &xMQTTContext );
         }
 
         /**************************** Publish and Keep Alive Loop. ******************************/
@@ -567,13 +568,14 @@ int RunCoreMqttMutualAuthDemo( bool awsIotMqttMode,
                  * #prvWaitForPacket will try to receive an incoming PUBLISH packet from broker.
                  * Please note that PUBACK for the outgoing PUBLISH may also be received before
                  * receiving an incoming PUBLISH. */
-                LogInfo( ( "Attempt to receive publish message from broker." ) );
+                /* aluque There's no need to wait for publish from broker */
+            	/*LogInfo( ( "Attempt to receive publish message from broker." ) );
                 xMQTTStatus = prvWaitForPacket( &xMQTTContext, MQTT_PACKET_TYPE_PUBLISH );
 
                 if( xMQTTStatus != MQTTSuccess )
                 {
                     xDemoStatus = pdFAIL;
-                }
+                }*/
             }
 
             /* aluque Toggle LEDs to sign that it is ok */
