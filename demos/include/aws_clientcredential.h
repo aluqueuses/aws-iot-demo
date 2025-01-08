@@ -43,7 +43,7 @@
  * by software, such as a production serial number, rather
  * than a hard coded constant.
  */
-#define clientcredentialIOT_THING_NAME               "SistCiberfis"
+#define clientcredentialIOT_THING_NAME               "SCF_202425"
 
 /*
  * @brief Port number the MQTT broker is using.
@@ -60,13 +60,12 @@
  *
  * @todo If you are using Wi-Fi, set this to your network name.
  */
-#define clientcredentialWIFI_SSID                    "MOVISTAR_AAD0"
-
+#define clientcredentialWIFI_SSID                    "pluto"
 /*
  * @brief Password needed to join Wi-Fi network.
  * @todo If you are using WPA, set this to your network password.
  */
-#define clientcredentialWIFI_PASSWORD                "zRWK4TFHFKKXFYFKFJPY"
+#define clientcredentialWIFI_PASSWORD                ""
 
 /*
  * @brief Wi-Fi network security type.
@@ -76,6 +75,7 @@
  * @note Possible values are eWiFiSecurityOpen, eWiFiSecurityWEP, eWiFiSecurityWPA,
  * eWiFiSecurityWPA2 (depending on the support of your device Wi-Fi radio).
  */
-#define clientcredentialWIFI_SECURITY                eWiFiSecurityWPA2
+//#define clientcredentialWIFI_SECURITY                eWiFiSecurityWPA2
+#define clientcredentialWIFI_SECURITY                eWiFiSecurityOpen
 
 #endif /* ifndef __AWS_CLIENTCREDENTIAL__H__ */
